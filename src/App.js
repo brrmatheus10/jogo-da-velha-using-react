@@ -1,22 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+const tabuleiro = [
+  [11, 0, 12, 0, 13],
+  [21, 0, 22, 0, 23],
+  [31, 0, 32, 0, 33],
+];
+
+const listItems = tabuleiro.map((number) => <li key={number}>{number}</li>);
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className='App'>
+      <header className='App-header'>
+        <h3>Este será meu jogo da velha</h3>
+        <h1>Tabuleiro: </h1>
+
+        <p style={{ color: listItems.number === 2 ? 'white' : 'green' }}>{listItems}</p>
       </header>
     </div>
   );
